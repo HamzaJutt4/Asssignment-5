@@ -18,7 +18,7 @@ public class Main extends JFrame implements ActionListener {
 
     public Main() {
         setTitle("Scientific Calculator");
-        setSize(500, 700); // Increased size
+        setSize(400, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout(10, 10));
         getContentPane().setBackground(new Color(30, 30, 30));
@@ -32,8 +32,7 @@ public class Main extends JFrame implements ActionListener {
     }
 
     private void initLogo() {
-        // Replace this path with the path to your new logo image
-        ImageIcon logo = new ImageIcon("path_to_your_new_logo_image.png");
+        ImageIcon logo = new ImageIcon("C:\\Users\\Hamza\\IdeaProjects\\Assignment 5\\Assignment 5.iml");
         JLabel logoLabel = new JLabel(logo);
         logoLabel.setHorizontalAlignment(SwingConstants.CENTER);
         add(logoLabel, BorderLayout.NORTH);
@@ -60,13 +59,13 @@ public class Main extends JFrame implements ActionListener {
     private JButton createButton(String label) {
         JButton button = new JButton(label);
         button.setFont(new Font("Monospaced", Font.BOLD, 22));
-        button.setBackground(new Color(70, 70, 70)); // Custom button color
+        button.setBackground(new Color(70, 70, 70));
         button.setForeground(Color.WHITE);
         button.setFocusPainted(false);
-        button.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3)); // Thicker border
+        button.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));
         button.addActionListener(this);
 
-        // Adding a pattern design (striped background)
+
         button.setOpaque(true);
         button.setBorderPainted(true);
 
@@ -75,7 +74,7 @@ public class Main extends JFrame implements ActionListener {
 
     private void initPanel() {
         panel = new JPanel();
-        panel.setLayout(new GridLayout(7, 4, 10, 10)); // Adjusted spacing between buttons
+        panel.setLayout(new GridLayout(7, 4, 10, 10));
         panel.setBackground(new Color(30, 30, 30));
         for (JButton button : buttons) {
             panel.add(button);
